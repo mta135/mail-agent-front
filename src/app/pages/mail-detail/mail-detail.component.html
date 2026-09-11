@@ -1,0 +1,27 @@
+@if (mail(); as m) {
+<div class="mail-detail">
+    <button class="back-btn" (click)="goBack()">
+        <i class="fa-solid fa-arrow-left"></i>
+        Înapoi la Inbox
+    </button>
+
+    <div class="detail-card">
+        <h2 class="detail-subject">{{ m.subject }}</h2>
+
+        <div class="detail-meta">
+            <div class="detail-avatar">{{ m.from.charAt(0) }}</div>
+            <div class="detail-meta-text">
+                <div class="detail-from">{{ m.from }}</div>
+                <div class="detail-to">Către: {{ m.to }}</div>
+            </div>
+            <div class="detail-date">{{ m.date | date: 'dd MMM yyyy, HH:mm' }}</div>
+        </div>
+
+        <div class="detail-body">
+            {{ m.body }}
+        </div>
+    </div>
+</div>
+} @else {
+<p class="not-found">Emailul nu a fost găsit.</p>
+}

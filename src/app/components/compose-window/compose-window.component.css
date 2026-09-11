@@ -69,6 +69,75 @@
 .compose-footer {
     padding: 10px 14px;
     border-top: 1px solid #E8E4DB;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.attach-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    color: #6B7280;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.attach-btn:hover {
+    background: #F5F3EE;
+}
+
+.attachment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.attachment-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #F5F3EE;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12.5px;
+    color: #3D4759;
+}
+
+.attachment-chip i.fa-paperclip {
+    color: #9098A8;
+    font-size: 11px;
+}
+
+.attachment-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.attachment-size {
+    color: #9098A8;
+    font-size: 11.5px;
+    flex-shrink: 0;
+}
+
+.attachment-remove {
+    background: transparent;
+    border: none;
+    color: #9098A8;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 2px 4px;
+    flex-shrink: 0;
+}
+
+.attachment-remove:hover {
+    color: #D14D4D;
 }
 
 .send-btn {
@@ -87,4 +156,54 @@
 
 .send-btn:hover {
     box-shadow: 0 4px 12px rgba(59, 130, 196, 0.45);
+}
+
+
+.recipients-field {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 1px solid #E8E4DB;
+    padding: 6px 2px;
+    min-height: 32px;
+}
+
+.recipients-field:focus-within {
+    border-color: #3B82C4;
+}
+
+.recipient-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #EEF2FA;
+    color: #2E3A4E;
+    font-size: 12.5px;
+    padding: 4px 8px;
+    border-radius: 14px;
+}
+
+.chip-remove {
+    background: transparent;
+    border: none;
+    color: #9098A8;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.chip-remove:hover {
+    color: #D14D4D;
+}
+
+.recipient-input {
+    flex: 1;
+    min-width: 100px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    padding: 4px 2px;
 }
