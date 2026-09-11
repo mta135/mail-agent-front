@@ -3,7 +3,7 @@
 
     <div class="mail-list">
         @for (mail of inboxMails(); track mail.id) {
-        <div class="mail-item" [class.unread]="!mail.read">
+        <div class="mail-item" [class.unread]="!mail.read" (click)="openMail(mail.id)">
             <div class="mail-avatar">{{ mail.from.charAt(0) }}</div>
             <div class="mail-info">
                 <div class="mail-top-row">
